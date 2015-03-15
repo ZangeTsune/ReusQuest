@@ -1,0 +1,25 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/labels/capitulo_1/label_01.rpy", line 5, in script
+    python:
+  File "game/labels/capitulo_1/label_01.rpy", line 15, in <module>
+    itemsEscena_C01L01.getItem(1).setPer
+AttributeError: ItemEscena instance has no attribute 'setPer'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/labels/capitulo_1/label_01.rpy", line 5, in script
+    python:
+  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/labels/capitulo_1/label_01.rpy", line 15, in <module>
+    itemsEscena_C01L01.getItem(1).setPer
+AttributeError: ItemEscena instance has no attribute 'setPer'
+
+Windows-7-6.1.7600
+Ren'Py 6.18.3.761
+Reus Quest PreAlpha 0.0.1 0.0
