@@ -1,8 +1,9 @@
 # You can place the script of your game in this file.
 # - Puedes colocar el 'script' de tu juego en este archivo.
 
+
 init python:
-    from game.model import Personaje, ItemEscena, Dialogo
+    from game.model import Personaje, ItemEscena, Dialogo, Jump
     from utils import ItemEscenaContainer
 
     escenaItems = ItemEscenaContainer()

@@ -1,4 +1,4 @@
-Sat Mar 21 18:24:08 2015
+Sat Mar 21 19:38:24 2015
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
 Reus Quest PreAlpha 0.0.1 0.0
@@ -227,5 +227,20 @@ Performance test:
 - Frame drawn at 0.011000 seconds.
 - Frame drawn at 0.014000 seconds.
 - Frame drawn at 0.015000 seconds.
-- Frame drawn at 0.017000 seconds.
-- 0.017000 seconds to render 5 frames.
+- Frame drawn at 0.016000 seconds.
+- 0.016000 seconds to render 5 frames.
+Traceback (most recent call last):
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\execution.py", line 294, in run
+    node.execute()
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/labels/capitulo_1/label_01.rpy", line 27, in <module>
+    $itemsEscena_C01L01.activeListeners()
+  File "utils/ItemEscenaContainer.py", line 32, in activeListeners
+  File "C:\Users\Gerard\projects\ReusQuest\game\model\ItemEscena.py", line 44, in doTheThing
+    self.doTheFirstThing()
+  File "C:\Users\Gerard\projects\ReusQuest\game\model\ItemEscena.py", line 50, in doTheFirstThing
+    self._item.doTheFirstThing()
+AttributeError: Jump instance has no attribute 'doTheFirstThing'
