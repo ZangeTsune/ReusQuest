@@ -8,3 +8,6 @@ class Jump:
 
     def doTheThing(self):
         exports.jump(self._label)
+
+    def doTheFirstThing(self):
+        self.doTheThing()
