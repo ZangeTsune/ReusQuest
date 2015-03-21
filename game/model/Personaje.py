@@ -8,7 +8,7 @@ class Personaje():
         self._level      = level
         self._maxHp      = maxHp
         self._hpActual   = maxHp
-        #self._mochila    = Mochila()
+        self._mochila    = Mochila()
         self._equipo     = Equipo()
         setattr(store, self.nombre, character.Character(self.nombre))
 
