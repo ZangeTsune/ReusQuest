@@ -3,7 +3,7 @@
 
 
 init python:
-    from game.model import Personaje, ItemEscena, Dialogo, Jump
+    from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje
     from utils import ItemEscenaContainer
 
     escenaItems = ItemEscenaContainer()
@@ -16,10 +16,11 @@ init python:
 # Declare characters used by this game.
 # - Declara los personajes usados en el juego como en el 
 #   ejemplo.
-define personaje = Personaje('Zange', 0, 10)
+define protagonista = Personaje( 0, 10, "Protagonista")
+define narrador = Personaje(0,0, None)
 
 # The game starts here.
 # - El juego comienza aquí.
 label start:
-    jump cap_01_lab_01
+    jump cap_01_escena_00
     return

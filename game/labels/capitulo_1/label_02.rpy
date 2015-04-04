@@ -2,7 +2,7 @@ init python:
     itemsEscena_C01L01 = None
 
 init:
-    image tutorial = "labels/capitulo_1/img/home_0.png"
+    image habitacionKeiishi_escritorio = "labels/capitulo_1/img/home_0.png"
     image habitacionKeiishi_0 = "labels/capitulo_1/img/home_1.png"
 
 label cap_01_escena_01:
