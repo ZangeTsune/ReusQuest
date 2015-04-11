@@ -1,12 +1,9 @@
-init python:
-    itemsEscena_C01L00 = None
-
-label cap_01_escena_00:
+label cap01_escena00:
 
     scene black
     with fade
 
-    $ renpy.play('labels/capitulo_1/sound/teclado.mp3')
+    $ renpy.play('sound/teclado.mp3')
     narrador "*ruido teclas de ordenador"
     narrador "...."
     $ renpy.play('sound/teclado.mp3')
@@ -18,4 +15,4 @@ label cap_01_escena_00:
     protagonista "...."
     protagonista "malditos trastos...."
 
-    jump cap_01_escena_01
+    jump cap01_escena01

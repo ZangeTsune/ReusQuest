@@ -1,24 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/label_01.rpy", line 10, in script
-    python:
-  File "game/labels/capitulo_1/label_01.rpy", line 14, in <module>
-    itemsEscena_C01L01.setItems(ItemEscena(Dialogo(personaje, ["He encontrado algo"], ["He encontrado algo", "solo la primera vez"])).setClickListener(0, 0 , 50, 50), ItemEscena(Jump("cap_01_lab_01_posible_2"), False).setClickListener(200, 200 , 50, 50, "img/b_derecha.png", None))
-NameError: name 'personaje' is not defined
+  File "game/labels/capitulo_1/escena_01.rpy", line 45, in script
+    extend "hablar con misteriosos personajes, "
+  File "renpy/common/00library.rpy", line 112, in extend
+    who.do_extend()
+NameError: global name 'self' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/label_01.rpy", line 10, in script
-    python:
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/labels/capitulo_1/label_01.rpy", line 14, in <module>
-    itemsEscena_C01L01.setItems(ItemEscena(Dialogo(personaje, ["He encontrado algo"], ["He encontrado algo", "solo la primera vez"])).setClickListener(0, 0 , 50, 50), ItemEscena(Jump("cap_01_lab_01_posible_2"), False).setClickListener(200, 200 , 50, 50, "img/b_derecha.png", None))
-NameError: name 'personaje' is not defined
+  File "game/labels/capitulo_1/escena_01.rpy", line 45, in script
+    extend "hablar con misteriosos personajes, "
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 593, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\exports.py", line 999, in say
+    who(what, interact=interact)
+  File "renpy/common/00library.rpy", line 112, in extend
+    who.do_extend()
+  File "C:\Users\Gerard\projects\ReusQuest\game\model\Personaje.py", line 28, in do_extend
+    getattr(store, self.nombreVariable).resolve_extend_attributes(self.predict(what))
+NameError: global name 'self' is not defined
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761

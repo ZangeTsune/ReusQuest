@@ -22,5 +22,5 @@ define narrador = Personaje(0,0, None)
 # The game starts here.
 # - El juego comienza aquí.
 label start:
-    jump cap_01_escena_00
+    jump cap01_escena00
     return

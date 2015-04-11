@@ -13,7 +13,7 @@ class Personaje():
         self.nombreVariable = self.nombre
         if self.nombre is None:
             self.nombreVariable = "Narrador"
-        setattr(store, self.nombreVariable, character.Character(self.nombre, ctc="ctc1", ctc_position="fixed"))
+        setattr(store, self.nombreVariable, character.Character(self.nombre, ctc_position="fixed"))
 
     def __call__(self, what, interact=True):
         return getattr(store, self.nombreVariable)(what, interact=interact)
@@ -23,6 +23,9 @@ class Personaje():
 
     def say(self, what):
         getattr(store, self.nombreVariable).resolve_say_attributes(self.predict(what))
+
+    def do_extend(self, what):
+        getattr(store, self.nombreVariable).resolve_extend_attributes(self.predict(what))
 
     def equipar(self, equipo):
         self._equipo.setEquipo(equipo)
