@@ -1,26 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_01.rpy", line 45, in script
-    extend "hablar con misteriosos personajes, "
+  File "game/labels/capitulo_1/escena_02.rpy", line 33, in script
+    extend "He estado MUCHO rato con esto"
   File "renpy/common/00library.rpy", line 112, in extend
     who.do_extend()
-NameError: global name 'self' is not defined
+TypeError: do_extend() takes exactly 2 arguments (1 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_01.rpy", line 45, in script
-    extend "hablar con misteriosos personajes, "
+  File "game/labels/capitulo_1/escena_02.rpy", line 33, in script
+    extend "He estado MUCHO rato con esto"
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 593, in execute
     renpy.exports.say(who, what, interact=self.interact)
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\exports.py", line 999, in say
     who(what, interact=interact)
   File "renpy/common/00library.rpy", line 112, in extend
     who.do_extend()
-  File "C:\Users\Gerard\projects\ReusQuest\game\model\Personaje.py", line 28, in do_extend
-    getattr(store, self.nombreVariable).resolve_extend_attributes(self.predict(what))
-NameError: global name 'self' is not defined
+TypeError: do_extend() takes exactly 2 arguments (1 given)
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761

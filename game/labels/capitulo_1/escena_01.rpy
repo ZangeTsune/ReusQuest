@@ -10,7 +10,8 @@ init:
 label cap01_escena01:
 
     python:
-        escena_C01S01 = ItemEscenaContainer()
+        if escena_C01S01 is None:
+            escena_C01S01 = ItemEscenaContainer()
 
         if escena_C01S01.getStatus() == 0:
             siguienteEscena = "cap01_escena01_init"
