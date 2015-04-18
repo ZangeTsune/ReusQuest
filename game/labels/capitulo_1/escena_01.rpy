@@ -19,12 +19,7 @@ label cap01_escena01:
         if escena_C01S01.getStatus() == 1:
             siguienteEscena = "cap01_escena01_tutorial"
 
-        if escena_C01S01.getStatus() == 2:
-            siguienteEscena = "cap01_escena02"
-
         renpy.jump(siguienteEscena)
-
-
 
 label cap01_escena01_init:
 
@@ -58,6 +53,9 @@ label cap01_escena01_init:
 
 
 label cap01_escena01_tutorial:
+
+    scene tutorial
+    with fade
 
     menu:
         "Exploración":
@@ -95,7 +93,6 @@ label cap01_escena01_tutorial:
         "¡ YA SE JUGAR ! ¡ cierra esto ! ":
             #musica
             #$musica ("music/home_0.mp3")
-            $escena_C01S01.avanza()
-            jump cap01_escena01
+            jump cap01_escena02
 
     jump cap01_escena01_tutorial

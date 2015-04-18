@@ -6,8 +6,6 @@ init python:
     from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje
     from utils import ItemEscenaContainer
 
-    escenaItems = ItemEscenaContainer()
-
 # Declare images below this line, using the image statement.
 # - Declara imágenes bajo esta línea, usando 'image' como
 #   en el ejemplo.
@@ -16,7 +14,8 @@ init python:
 # Declare characters used by this game.
 # - Declara los personajes usados en el juego como en el 
 #   ejemplo.
-define protagonista = Personaje( 0, 10, "Protagonista")
+define protagonista = Personaje( 0, 10, "Protagonista",(192, 64, 64, 255))
+define antagonista = Personaje( 0, 10, "Antagonista",(28, 64, 184, 255))
 define narrador = Personaje(0,0, None)
 
 # The game starts here.
