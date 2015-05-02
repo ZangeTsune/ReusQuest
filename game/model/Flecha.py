@@ -1,20 +1,20 @@
 __author__ = 'Isidre'
 
-import ItemEscena, Jump
+from model import ItemEscena, Jump
 
 class Flecha(ItemEscena):
 
-    IZQUIERDA = "img/b_izquierda"
-    DERECHA = "img/b_derecha"
-    ARRIBA = "img/b_arriba"
-    ABAJO = "img/b_abajo"
+    IZQUIERDA = "img/b_izquierda.png"
+    DERECHA = "img/b_derecha.png"
+    ARRIBA = "img/b_arriba.png"
+    ABAJO = "img/b_abajo.png"
 
     def __init__(self, direccion, label, xpos, ypos, xmaximum, ymaximum, imgActivo=None, imgDesactivo=None, activo=True):
+        ItemEscena.__init__(self, Jump(label), activo)
 
         if (imgActivo == None):
             self._direccion = direccion
         else:
             self._direccion = imgActivo
-        self._jump = Jump(label).setClickListener(xpos, ypos, xmaximum, ymaximum, direccion)
 
-        ItemEscena.__init__(self, self._jump, activo)
+        self.setClickListener(xpos, ypos, xmaximum, ymaximum, direccion, imgDesactivo)

@@ -2,7 +2,7 @@
 # - Puedes colocar el 'script' de tu juego en este archivo.
 
 init python:
-    from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje
+    from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje, Flecha
     from utils import ItemEscenaContainer
     from utils import GlobalParams
     #setattr(store, "globales", GlobalParams())

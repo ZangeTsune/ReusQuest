@@ -12,7 +12,7 @@ label cap01_escena02:
 
         if escena_C01S02 is None:
             escena_C01S02 = ItemEscenaContainer()
-            escena_C01S02.setItems( Flecha(Flecha.Izquierda,"cap01_escena03", 0.05,0.8,50,50), ItemEscena(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
+            escena_C01S02.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena03", 0.05,0.8,50,50), ItemEscena(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
                                    ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"])).setClickListener(0.69,0.6,50,50))
 
             # [ ["izquierda","home1",0.05,0.8]
