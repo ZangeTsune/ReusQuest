@@ -3,11 +3,16 @@ init python:
 
 label cap01_escena02:
 
+    if globales.otraEscena :
+        scene escritorio
+        with fade
+        $globales.otraEscena = False
+
     python:
 
         if escena_C01S02 is None:
             escena_C01S02 = ItemEscenaContainer()
-            escena_C01S02.setItems(ItemEscena(Jump("cap01_escena03")).setClickListener(0.05,0.8,50,50, "img/b_izquierda.png"),ItemEscena(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
+            escena_C01S02.setItems( Flecha(Flecha.Izquierda,"cap01_escena03", 0.05,0.8,50,50), ItemEscena(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
                                    ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"])).setClickListener(0.69,0.6,50,50))
 
             # [ ["izquierda","home1",0.05,0.8]
@@ -38,9 +43,6 @@ label cap01_escena02_init:
     # Muestra Escritorio
 
 
-    scene escritorio
-    with fade
-
     protagonista "Uff... "
     extend "He estado MUCHO rato con esto"
     protagonista "Me duele tanto la cabeza que no recuerdo ni MI NOMBRE"
@@ -63,14 +65,13 @@ label cap01_escena02_init:
     $antagonista.setNombre("Random")
     antagonista "mi cerebroooo "
 
-
-
     $escena_C01S02.avanza()
 
     jump cap01_escena02
 
 label cap01_escena02_paso01:
     # Muestra Habitacion 1
+
 
     $escena_C01S02.setDebugMode()
     $escena_C01S02.activeListeners()

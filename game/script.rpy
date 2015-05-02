@@ -1,10 +1,12 @@
 # You can place the script of your game in this file.
 # - Puedes colocar el 'script' de tu juego en este archivo.
 
-
 init python:
     from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje
     from utils import ItemEscenaContainer
+    from utils import GlobalParams
+    #setattr(store, "globales", GlobalParams())
+    globales = GlobalParams()
 
 # Declare images below this line, using the image statement.
 # - Declara imágenes bajo esta línea, usando 'image' como

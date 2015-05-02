@@ -1,8 +1,8 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_02.rpy", line 6, in script
-    python:
+  File "game/labels/capitulo_1/escena_02.rpy", line 77, in script
+    $escena_C01S02.activeListeners()
 ScriptError: could not find label 'cap01_escena03'.
 
 -- Full Traceback ------------------------------------------------------------
@@ -16,8 +16,8 @@ Full traceback:
     renpy.execution.run_context(True)
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\execution.py", line 598, in run_context
     context.run()
-  File "game/labels/capitulo_1/escena_02.rpy", line 6, in script
-    python:
+  File "game/labels/capitulo_1/escena_02.rpy", line 77, in script
+    $escena_C01S02.activeListeners()
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\script.py", line 595, in lookup
     raise ScriptError("could not find label '%s'." % str(label))
 ScriptError: could not find label 'cap01_escena03'.

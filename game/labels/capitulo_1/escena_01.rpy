@@ -93,6 +93,7 @@ label cap01_escena01_tutorial:
         "¡ YA SE JUGAR ! ¡ cierra esto ! ":
             #musica
             #$musica ("music/home_0.mp3")
-            jump cap01_escena02
+
+            $Jump("cap01_escena02").doTheThing()
 
     jump cap01_escena01_tutorial
