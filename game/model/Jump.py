@@ -1,5 +1,5 @@
 __author__ = 'Zange'
-from renpy import exports
+from renpy import exports, store
 
 class Jump:
 
@@ -7,6 +7,7 @@ class Jump:
         self._label = label
 
     def doTheThing(self):
+        getattr(store, "globales").otraEscena = True
         exports.jump(self._label)
 
     def doTheFirstThing(self):
