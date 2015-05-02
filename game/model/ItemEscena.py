@@ -1,6 +1,3 @@
-from renpy import exports
-
-
 class ItemEscena:
 
     def __init__(self, item=None, activo=True):
@@ -16,6 +13,9 @@ class ItemEscena:
 
     def desActivar(self):
         self._activo = False
+
+    def isActivado(self):
+        return self._activo
 
     def setEncontrado(self, encontrado=True):
         self._encontrado = encontrado
