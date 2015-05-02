@@ -6,6 +6,7 @@ class ItemEscenaContainer:
     def __init__(self):
         self._itemsEscena = []
         self._color = "#0000"
+        self._status = 0
 
     def setItems(self, *args):
         for item in args:
@@ -16,6 +17,15 @@ class ItemEscenaContainer:
 
     def setDebugMode(self):
         self._color = "#FFFF"
+
+    def getStatus(self):
+        return self._status
+
+    def setStatus(self, value):
+        self._status = value
+
+    def avanza(self):
+        self._status += 1
 
     def activeListeners(self):
         botones = []
