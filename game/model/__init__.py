@@ -9,5 +9,5 @@ from Personaje import Personaje
 from Monedero import Monedero
 from Dialogo import Dialogo
 from Jump import Jump
-from Flecha import Flecha
-from MostrarTexto import MostrarTexto
+from RecogerHandler import RecogerHandler
+from escenario import *

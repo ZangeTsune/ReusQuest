@@ -1,8 +1,10 @@
-from game.model import Equipable, Consumible
+from game.model import Equipable, Consumible, Monedero
+
 
 class Mochila:
+
     def __init__(self):
-        self.dinero = 0.0
+        self._monedero = Monedero()
 
         self._consumibles = {Consumible.BEGUDA_PLIM: Consumible(Consumible.BEGUDA_PLIM),
                              Consumible.MENJAR_BLANC: Consumible(Consumible.MENJAR_BLANC),
@@ -17,18 +19,17 @@ class Mochila:
                             Equipable.CASCO: [],
                             Equipable.ACCESORIO: []}
 
-    def putItems(self, idItem, num=1):
+    def putConsumible(self, consumible):
+        self._consumibles.get(consumible.getId()) + consumible.getCantidad()
 
-        if idItem in self._consumibles:
-            self._consumibles.get(idItem) + num
-
-    def putEquip(self, item):
-
-        if item.getId in self._equipables:
-            self._equipables.get(item.getId).append(item)
+    def putEquipable(self, equipable):
+        self._equipables.get(equipable.getId).append(equipable)
 
     #TODO funcion de quitar objeto equipo
             
     def gastarItem(self, id_item):
         if id_item in self._consumibles:            
             self._consumibles.get(id_item) - 1
+
+    def gestionarMonedero(self, monedero):
+        self._monedero + monedero

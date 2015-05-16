@@ -11,13 +11,13 @@ class Personaje():
         self._mochila    = Mochila()
         self._equipo     = Equipo()
         self.nombreVariable = self.nombre
+
         if self.nombre is None:
             self.nombreVariable = "Narrador"
             setattr(store, self.nombreVariable, character.Character(self.nombre, color=color, ctc_position="fixed"))
         else:
             setattr(store, nombre+"Nombre", self.nombre)
             setattr(store, self.nombreVariable, character.DynamicCharacter( nombre+"Nombre", color=color, ctc_position="fixed"))
-
 
     def __call__(self, what, interact=True):
         return getattr(store, self.nombreVariable)(what, interact=interact)
@@ -59,3 +59,6 @@ class Personaje():
             return True
         else:
             return False
+
+    def getMochila(self):
+        return self._mochila
