@@ -1,10 +1,6 @@
 init python:
     escena_C01S03 = None
 
-init:
-    image home01 = "labels/capitulo_1/img/home_1.png"
-    image home01_01 = "labels/capitulo_1/img/home_1_1.png"
-
 label cap01_escena03:
 
     if globales.otraEscena :
@@ -20,8 +16,8 @@ label cap01_escena03:
 
         if escena_C01S03 is None:
             escena_C01S03 = ItemEscenaContainer()
-            escena_C01S03.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.8,50,50), Recoger(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
-                                   ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"])).setClickListener(0.69,0.6,50,50))
+            #escena_C01S03.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.8,50,50), Recoger(Equipable( , ) ,0.41,0.29,270,175),
+            #                       ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"])).setClickListener(0.69,0.6,50,50))
 
         if escena_C01S03.getStatus() == 0:
             siguienteEscena = "cap01_escena03_init"
@@ -42,6 +38,13 @@ label cap01_escena03_init:
     protagonista "esto es una prueba "
     extend "He estado MUCHO rato con esto"
     protagonista "coger ESPADA"
+
+    show newitem:
+        ypos .3  xpos .3
+    $ renpy.play('sound/item.wav')
+    show item_shinai:
+        ypos .35  xpos .35
+    narrador "Consigues un Shinai ( espada de Bambú )"
 
     $escena_C01S03.setDebugMode()
     $escena_C01S03.activeListeners()

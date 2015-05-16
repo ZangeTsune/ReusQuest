@@ -4,9 +4,10 @@
 init python:
     from game.model import Personaje, ItemEscena, Dialogo, Jump, Personaje, Flecha, MostrarTexto
     from utils import ItemEscenaContainer
-    from utils import GlobalParams
+    from utils import GlobalParams, Utils
     #setattr(store, "globales", GlobalParams())
     globales = GlobalParams()
+    utils = Utils(globales)
 
 # Declare images below this line, using the image statement.
 # - Declara imágenes bajo esta línea, usando 'image' como
