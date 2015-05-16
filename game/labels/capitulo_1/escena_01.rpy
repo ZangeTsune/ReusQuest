@@ -3,10 +3,6 @@
 init python:
     escena_C01S01 = None
 
-init:
-    image tutorial = "labels/capitulo_1/img/home_00.png"
-    image escritorio = "labels/capitulo_1/img/home_0.png"
-
 label cap01_escena01:
 
     python:
@@ -34,7 +30,7 @@ label cap01_escena01_init:
     scene tutorial
     with fade
 
-    #$musica ("music/tutorial.mp3")
+    $utils.musica ("music/tutorial.mp3")
 
     narrador "mostrar imagen"
     narrador "¡ Bienvenido a Reus Quest !"

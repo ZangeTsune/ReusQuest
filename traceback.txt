@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/labels/capitulo_1/escena_03.rpy", line 19, in script
-    python:
-  File "game/labels/capitulo_1/escena_03.rpy", line 23, in <module>
-    escena_C01S03.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.8,50,50), Recoger(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
-NameError: name 'Recoger' is not defined
+While executing init code:
+  File "game/script.rpy", line 4, in script
+    init python:
+  File "game/script.rpy", line 10, in <module>
+    utils = Utils(globales)
+TypeError: this constructor takes no arguments
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_03.rpy", line 19, in script
-    python:
+  File "game/script.rpy", line 4, in script
+    init python:
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/capitulo_1/escena_03.rpy", line 23, in <module>
-    escena_C01S03.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.8,50,50), Recoger(Jump("cap01_escena01")).setClickListener(0.41,0.29,270,175),
-NameError: name 'Recoger' is not defined
+  File "game/script.rpy", line 10, in <module>
+    utils = Utils(globales)
+TypeError: this constructor takes no arguments
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
