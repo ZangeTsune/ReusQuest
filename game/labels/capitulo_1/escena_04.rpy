@@ -8,8 +8,8 @@ init:
 label cap01_escena04:
 
     if globales.otraEscena :
-            scene home01_01
-            with fade
+        scene home01_01
+        with fade
         $globales.otraEscena = False
 
     python:
@@ -32,7 +32,7 @@ label cap01_escena04:
 
 
 
-label cap01_escena03_init:
+label cap01_escena04_init:
     # Muestra Escritorio
 
     protagonista "esto es una prueba "
@@ -44,13 +44,13 @@ label cap01_escena03_init:
 
     #$escena_C01S03.avanza()
 
-    jump cap01_escena03
+    jump cap01_escena04
 
-label cap01_escena03_paso01:
+label cap01_escena04_paso01:
     # Muestra Habitacion 1
 
     $escena_C01S03.setDebugMode()
     $escena_C01S03.activeListeners()
 
     #$escena_C01S02.avanza()
-    jump cap01_escena02
+    jump cap01_escena03

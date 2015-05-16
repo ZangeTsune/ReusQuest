@@ -12,8 +12,7 @@ label cap01_escena02:
 
         if escena_C01S02 is None:
             escena_C01S02 = ItemEscenaContainer()
-            escena_C01S02.setItems(Flecha(Flecha.IZQUIERDA,"cap01_escena03", 0.05,0.8), Flecha(Flecha.TRANSPARENTE, "cap01_escena01", 0.41,0.29,270,175)),
-                                   MostrarTexto(None, ["Pio"], 0.69,0.6,50,50, ["Pio Pio"], "sound/pollo.mp3")))
+            escena_C01S02.setItems(Flecha(Flecha.IZQUIERDA,"cap01_escena03", 0.05,0.8), Flecha(Flecha.TRANSPARENTE, "cap01_escena01", 0.41,0.29,270,175), MostrarTexto(None, ["Pio"], 0.69,0.6,50,50, ["Pio Pio"], "sound/pollo.mp3"))
 
             # [ ["izquierda","home1",0.05,0.8]
             #     ],[
