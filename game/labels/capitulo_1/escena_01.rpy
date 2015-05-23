@@ -88,8 +88,7 @@ label cap01_escena01_tutorial:
             narrador "nunca se sabe lo que te puedes encontrar"
         "¡ YA SE JUGAR ! ¡ cierra esto ! ":
             #musica
-            #$musica ("music/home_0.mp3")
-
+            $utils.musica ("music/home_0.mp3")
             $Jump("cap01_escena02").doTheThing()
 
     jump cap01_escena01_tutorial

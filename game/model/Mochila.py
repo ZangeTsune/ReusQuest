@@ -4,7 +4,7 @@ from game.model import Equipable, Consumible, Monedero
 class Mochila:
 
     def __init__(self):
-        self._monedero = Monedero()
+        self._monedero = Monedero
 
         self._consumibles = {Consumible.BEGUDA_PLIM: Consumible(Consumible.BEGUDA_PLIM),
                              Consumible.MENJAR_BLANC: Consumible(Consumible.MENJAR_BLANC),

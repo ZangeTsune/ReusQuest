@@ -1,7 +1,7 @@
 from game.model import Monedero, Consumible, Equipable
 from renpy import store
 
-__author__ = 'Isidre'
+__author__ = 'Zange'
 
 class RecogerHandler:
 
