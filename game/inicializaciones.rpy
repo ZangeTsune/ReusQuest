@@ -1,6 +1,6 @@
 # Animaciones
 
-image newitem:
+image newItem:
     "img/newitem_0.png"
     pause .1
     "img/newitem_1.png"
