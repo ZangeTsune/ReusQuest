@@ -8,6 +8,9 @@
     image home02_01 = "labels/capitulo_1/img/home_2_1.png"
 
 
-
     # Objetos
     image item_shinai= "img/shinai.png"
+
+    #equipables
+    python:
+        equipableShinai = Equipable(Equipable.ARMA, ""img/shinai.png"")
