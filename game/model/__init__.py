@@ -1,6 +1,6 @@
 __author__ = 'Zange'
 
-__all_=['Consumible','Equipable','Equipo','ItemEscena','Mochila','Personaje','Monedero','Dialogo','Jump','RecogerHandler','escenario',]
+__all_=['Consumible','Equipable','Equipo','ItemEscena','Mochila','Personaje','Monedero','Dialogo','Jump','RecogerHandler','escenario']
 
 from Consumible import Consumible
 from Equipable import Equipable
