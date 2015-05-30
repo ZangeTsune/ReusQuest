@@ -1,28 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_02.rpy", line 63, in script
-    antagonista "pues yo creo que no"
-NameError: name 'AntagonistaNombre' is not defined
+  File "game/labels/capitulo_1/escena_03.rpy", line 54, in script
+    $escena_C01S03.activeListeners()
+  File "game/labels/capitulo_1/escena_03.rpy", line 54, in <module>
+    $escena_C01S03.activeListeners()
+TypeError: 'Transform' object is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_02.rpy", line 63, in script
-    antagonista "pues yo creo que no"
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 593, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\exports.py", line 999, in say
-    who(what, interact=interact)
-  File "C:\Users\Gerard\projects\ReusQuest\game\model\Personaje.py", line 23, in __call__
-    return getattr(store, self.nombreVariable)(what, interact=interact)
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\character.py", line 796, in __call__
-    who = renpy.python.py_eval(who)
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1416, in py_eval
-    return eval(py_compile(source, 'eval'), globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'AntagonistaNombre' is not defined
+  File "game/labels/capitulo_1/escena_03.rpy", line 54, in script
+    $escena_C01S03.activeListeners()
+  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/labels/capitulo_1/escena_03.rpy", line 54, in <module>
+    $escena_C01S03.activeListeners()
+  File "utils/ItemEscenaContainer.py", line 42, in activeListeners
+  File "C:\Users\Isidre\projects\ReusQuest\game\model\ItemEscena.py", line 44, in doTheThing
+    self.doTheFirstThing()
+  File "C:\Users\Isidre\projects\ReusQuest\game\model\ItemEscena.py", line 50, in doTheFirstThing
+    self._item.doTheFirstThing()
+  File "C:\Users\Isidre\projects\ReusQuest\game\model\RecogerHandler.py", line 32, in doTheFirstThing
+    self.doTheThing()
+  File "C:\Users\Isidre\projects\ReusQuest\game\model\RecogerHandler.py", line 27, in doTheThing
+    exports.show(('newItem',), Transform(xpos=.3), Transform(ypos=.3))
+  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\exports.py", line 495, in show
+    for i in at_list:
+TypeError: 'Transform' object is not iterable
 
-Windows-post2008Server-6.2.9200
+Windows-7-6.1.7600
 Ren'Py 6.18.3.761
 Reus Quest PreAlpha 0.0.1 0.0

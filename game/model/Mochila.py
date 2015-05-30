@@ -1,6 +1,5 @@
 from game.model import Equipable, Consumible, Monedero
 
-
 class Mochila:
 
     def __init__(self):
@@ -23,7 +22,10 @@ class Mochila:
         self._consumibles.get(consumible.getId()) + consumible.getCantidad()
 
     def putEquipable(self, equipable):
-        self._equipables.get(equipable.getId).append(equipable)
+        self._equipables.get(equipable.getId()).append(equipable)
+
+    def getNumEquipables(self):
+        return self._equipables.items()
 
     #TODO funcion de quitar objeto equipo
             

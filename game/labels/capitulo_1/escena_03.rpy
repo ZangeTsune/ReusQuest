@@ -21,9 +21,10 @@ label cap01_escena03:
                                     MostrarTexto(protagonista, ["diversos objetos de decoración", " cuya unica utilidad real es acumular polvo.."], 0,0.3,190,180, None),
                                     MostrarTexto(protagonista, ["me gusta ese poster",", claro que si no me gustase no estaría aquí.."], 0.25,0.1,180,280, None),
                                     MostrarTexto(protagonista, ["cartel de las '1as Jornades de manga i cultura japonesa de Reus' por la associación juvenil Irasshai (TM)","no vayais a ir ahora, fueron en navidades del 2008"], 0.3,0.6,90,70, None),
-                                    MostrarTexto(protagonista, ["Esa SI es una buena película de animación, de las mejores que he visto"], 0.545,0.03,150,100, None),
-                                    MostrarTexto(protagonista, ["Aqui iria un texto con un menu (ver original)"], 0.95,0.2,50,150, None))
-                                    Recoger(Equipable( , ) ,0.41,0.29,270,175),
+                                    #MostrarTexto(protagonista, ["Esa SI es una buena película de animación, de las me7jores que he visto"], 0.545,0.03,150,100, None),
+                                    MostrarTexto(protagonista, ["Aqui iria un texto con un menu (ver original)"], 0.95,0.2,50,150, None),
+                                    Recoger(Equipable(Equipable.ARMA), 0.545,0.03,150,100))
+
         if escena_C01S03.getStatus() == 0:
             siguienteEscena = "cap01_escena03_init"
 
