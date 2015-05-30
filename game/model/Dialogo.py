@@ -14,6 +14,7 @@ class Dialogo:
 
     def doTheThing(self):
         for linia in self._what:
+            #TODO: array de arrays, si en linea hay mas de un string mostrar-lo con extend
             if self._sonido is not None:
                 exports.play(self._sonido)
             exports.say(self._who, linia)

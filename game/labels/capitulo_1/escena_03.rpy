@@ -16,9 +16,14 @@ label cap01_escena03:
 
         if escena_C01S03 is None:
             escena_C01S03 = ItemEscenaContainer()
-            #escena_C01S03.setItems( Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.8,50,50), Recoger(Equipable( , ) ,0.41,0.29,270,175),
-            #                       ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"])).setClickListener(0.69,0.6,50,50))
-
+            escena_C01S03.setItems( Flecha(Flecha.ARRIBA, "cap01_escena04", 0.6,0.8), Flecha(Flecha.IZQUIERDA,"cap01_escena02", 0.05,0.85),
+                                    MostrarTexto(protagonista, ["en este armario, hay cosas", ", posiblemente cosas maravillosas e impactantes...", "pero si lo abro ahora seguramente provoque una avalancha", ", o sea que mejor paso"], 0,0,190,170, None),
+                                    MostrarTexto(protagonista, ["diversos objetos de decoración", " cuya unica utilidad real es acumular polvo.."], 0,0.3,190,180, None),
+                                    MostrarTexto(protagonista, ["me gusta ese poster",", claro que si no me gustase no estaría aquí.."], 0.25,0.1,180,280, None),
+                                    MostrarTexto(protagonista, ["cartel de las '1as Jornades de manga i cultura japonesa de Reus' por la associación juvenil Irasshai (TM)","no vayais a ir ahora, fueron en navidades del 2008"], 0.3,0.6,90,70, None),
+                                    MostrarTexto(protagonista, ["Esa SI es una buena película de animación, de las mejores que he visto"], 0.545,0.03,150,100, None),
+                                    MostrarTexto(protagonista, ["Aqui iria un texto con un menu (ver original)"], 0.95,0.2,50,150, None))
+                                    Recoger(Equipable( , ) ,0.41,0.29,270,175),
         if escena_C01S03.getStatus() == 0:
             siguienteEscena = "cap01_escena03_init"
 
@@ -33,31 +38,36 @@ label cap01_escena03:
 
 
 label cap01_escena03_init:
-    # Muestra Escritorio
+    $ renpy.play('sound/wilhem.mp3')
+    narrador "..."
+    protagonista "Vaya, parece que los vecinos estan de fiesta, OTRA VEZ..."
+
+    $escena_C01S03.avanza()
+
+    jump cap01_escena03
+
+label cap01_escena03_paso01:
+    # espada no recogible.
+
+    $escena_C01S03.setDebugMode()
+    $escena_C01S03.activeListeners()
+
+
 
     protagonista "esto es una prueba "
     extend "He estado MUCHO rato con esto"
     protagonista "coger ESPADA"
 
-    show newitem:
+    show newItem:
         ypos .3  xpos .3
     $ renpy.play('sound/item.wav')
+
     show item_shinai:
         ypos .35  xpos .35
+
+
     narrador "Consigues un Shinai ( espada de Bambú )"
 
-    $escena_C01S03.setDebugMode()
-    $escena_C01S03.activeListeners()
-
-    #$escena_C01S03.avanza()
-
-    jump cap01_escena03
-
-label cap01_escena03_paso01:
-    # Muestra Habitacion 1
-
-    $escena_C01S03.setDebugMode()
-    $escena_C01S03.activeListeners()
 
     #$escena_C01S02.avanza()
     jump cap01_escena02

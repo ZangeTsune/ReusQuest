@@ -2,7 +2,7 @@ from game.model import Monedero, Consumible, Equipable
 from renpy import store, exports
 from renpy.display.motion import Transform
 
-__author__ = 'Isidre'
+__author__ = 'Zange'
 
 class RecogerHandler:
 
