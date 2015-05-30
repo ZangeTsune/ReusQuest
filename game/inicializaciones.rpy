@@ -25,9 +25,3 @@ image coin:
     "img/coin_03.png"
     pause .1
     repeat
-
-
-# Metodos Script
-
-
-
