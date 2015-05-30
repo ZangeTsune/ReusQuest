@@ -1,4 +1,5 @@
 init python:
+    from game.labels.capitulo_1 import Inicializaciones
     escena_C01S03 = None
 
 label cap01_escena03:
@@ -23,7 +24,7 @@ label cap01_escena03:
                                     MostrarTexto(protagonista, ["cartel de las '1as Jornades de manga i cultura japonesa de Reus' por la associación juvenil Irasshai (TM)","no vayais a ir ahora, fueron en navidades del 2008"], 0.3,0.6,90,70),
                                     MostrarTexto(protagonista, ["Esa SI es una buena película de animación, de las me7jores que he visto"], 0.545,0.03,150,100),
                                     MostrarTexto(protagonista, ["Aqui iria un texto con un menu (ver original)"], 0.95,0.2,50,150),
-                                    Recoger(Equipable(Equipable.ARMA, "item_shinai"), "Consigues un Shinai ( espada de Bambú )", 0.42, 0.58, 25, 240))
+                                    Recoger(Inicializaciones().getEquipable(Inicializaciones.EQUIPABLE_SHINAI)), 0.42, 0.58, 25, 240))
 
         if escena_C01S03.getStatus() == 0:
             siguienteEscena = "cap01_escena03_init"
