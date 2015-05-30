@@ -50,3 +50,4 @@ label cap01_escena04_paso01:
 
     #$escena_C01S02.avanza()
     jump cap01_escena03
+
