@@ -1,3 +1,3 @@
 __author__ = 'Zange'
 
-from Inicializaciones import Inicializaciones
+from IniPython import Inicializaciones
