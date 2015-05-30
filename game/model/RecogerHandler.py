@@ -1,4 +1,5 @@
 from game.model import Monedero, Consumible, Equipable
+from game.labels.capitulo_1 import Inicializaciones
 from renpy import store, exports
 from renpy.display.motion import Transform
 
@@ -6,8 +7,8 @@ __author__ = 'Zange'
 
 class RecogerHandler:
 
-    def __init__(self, recoger, item):
-        self._item = item
+    def __init__(self, recoger, id_item):
+        self._item = Inicializaciones().getEquipable(id_item)
         self._recoger = recoger
 
     def doTheThing(self):
