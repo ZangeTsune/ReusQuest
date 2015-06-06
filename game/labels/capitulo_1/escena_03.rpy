@@ -1,5 +1,4 @@
 init python:
-    from game.labels.capitulo_1 import Inicializaciones
     escena_C01S03 = None
 
 

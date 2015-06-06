@@ -1,36 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_03.rpy", line 54, in script
-    $escena_C01S03.activeListeners()
-  File "game/labels/capitulo_1/escena_03.rpy", line 54, in <module>
-    $escena_C01S03.activeListeners()
-TypeError: 'Transform' object is not iterable
+  File "game/labels/capitulo_1/escena_03.rpy", line 16, in script
+    python:
+  File "game/labels/capitulo_1/escena_03.rpy", line 27, in <module>
+    Recoger(Inicializaciones().getEquipable(Inicializaciones.EQUIPABLE_SHINAI)), 0.42, 0.58, 25, 240))
+NameError: name 'Inicializaciones' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_03.rpy", line 54, in script
-    $escena_C01S03.activeListeners()
-  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\ast.py", line 785, in execute
+  File "game/labels/capitulo_1/escena_03.rpy", line 16, in script
+    python:
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/capitulo_1/escena_03.rpy", line 54, in <module>
-    $escena_C01S03.activeListeners()
-  File "utils/ItemEscenaContainer.py", line 42, in activeListeners
-  File "C:\Users\Isidre\projects\ReusQuest\game\model\ItemEscena.py", line 44, in doTheThing
-    self.doTheFirstThing()
-  File "C:\Users\Isidre\projects\ReusQuest\game\model\ItemEscena.py", line 50, in doTheFirstThing
-    self._item.doTheFirstThing()
-  File "C:\Users\Isidre\projects\ReusQuest\game\model\RecogerHandler.py", line 32, in doTheFirstThing
-    self.doTheThing()
-  File "C:\Users\Isidre\projects\ReusQuest\game\model\RecogerHandler.py", line 27, in doTheThing
-    exports.show(('newItem',), Transform(xpos=.3), Transform(ypos=.3))
-  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\exports.py", line 495, in show
-    for i in at_list:
-TypeError: 'Transform' object is not iterable
+  File "game/labels/capitulo_1/escena_03.rpy", line 27, in <module>
+    Recoger(Inicializaciones().getEquipable(Inicializaciones.EQUIPABLE_SHINAI)), 0.42, 0.58, 25, 240))
+NameError: name 'Inicializaciones' is not defined
 
-Windows-7-6.1.7600
+Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
 Reus Quest PreAlpha 0.0.1 0.0
