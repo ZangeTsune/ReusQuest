@@ -10,7 +10,3 @@
 
     # Objetos
     image item_shinai= "img/shinai.png"
-
-    #equipables
-    python:
-        equipableShinai = Equipable(Equipable.ARMA, ""img/shinai.png"")
