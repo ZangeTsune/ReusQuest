@@ -1,3 +1,6 @@
 __author__ = 'Zange'
 
-from IniPython import Inicializaciones
+
+__all__ = ["IniPython"]
+
+from IniPython import IniPython

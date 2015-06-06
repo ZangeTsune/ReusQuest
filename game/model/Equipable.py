@@ -7,9 +7,10 @@ class Equipable:
     CASCO       = 3
     ACCESORIO   = 4
     
-    def __init__(self, id_equipable = None, nombre = "", ataque = 0, defensa = 0):
+    def __init__(self, id_equipable = None, imagen="", nombre = "", ataque = 0, defensa = 0):
         self._id_equipable = id_equipable #tipo
         self._nombre = nombre
+        self._imagen = imagen
         self._ataque = ataque
         self._defensa = defensa
 
@@ -24,3 +25,6 @@ class Equipable:
 
     def getDefensa(self):
         return self._defensa
+
+    def getImagen(self):
+        return self._imagen

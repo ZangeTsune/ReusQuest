@@ -5,18 +5,12 @@ init python:
     from game.model import *
     from utils import ItemEscenaContainer
     from utils import GlobalParams, Utils
-    #setattr(store, "globales", GlobalParams())
+    from game.labels.capitulo_1 import *
+
     globales = GlobalParams()
     utils = Utils(globales)
 
-# Declare images below this line, using the image statement.
-# - Declara imágenes bajo esta línea, usando 'image' como
-#   en el ejemplo.
-# eg. image eileen happy = "eileen_happy.png"
-
-# Declare characters used by this game.
-# - Declara los personajes usados en el juego como en el 
-#   ejemplo.
+# - Declara los personajes usados en el juego como
 define protagonista = Personaje( 0, 10, "Protagonista",(192, 64, 64, 255))
 define antagonista = Personaje( 0, 10, "Antagonista",(28, 64, 184, 255))
 define narrador = Personaje(0,0, None)

@@ -1,13 +1,14 @@
 from game.model import Monedero, Consumible, Equipable
 from renpy import store, exports
 from renpy.display.motion import Transform
-
+from game.labels.capitulo_1 import IniPython
 __author__ = 'Zange'
 
 class RecogerHandler:
 
-    def __init__(self, item):
-        self._item = item
+    def __init__(self,recoger, id_item):
+        self._item = IniPython().getEquipable(id_item)
+        self._recoger = recoger
 
     def doTheThing(self):
         if isinstance(self._item, Monedero):
@@ -19,12 +20,18 @@ class RecogerHandler:
         elif isinstance(self._item, Consumible):
             getattr(store, "protagonista").getMochila().putConsumible(self._item)
             exports.show('newItem', [Transform(xpos=.3, ypos=.3)])
+            self._recoger.desActivar()
             #Animacion
             pass
 
         elif isinstance(self._item, Equipable):
             getattr(store, "protagonista").getMochila().putEquipable(self._item)
             exports.show('newItem', [Transform(xpos=.3,ypos=.3)])
+            exports.show(self._item.getImagen(), [Transform(xpos=.35,ypos=.35)])
+            exports.play("sound/item.wav")
+
+
+            self._recoger.desActivar()
             #Animacion
             pass
 

@@ -1,24 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_03.rpy", line 16, in script
-    python:
-  File "game/labels/capitulo_1/escena_03.rpy", line 27, in <module>
-    Recoger(Inicializaciones().getEquipable(Inicializaciones.EQUIPABLE_SHINAI)), 0.42, 0.58, 25, 240))
-NameError: name 'Inicializaciones' is not defined
+WindowsError: [Error 183] No se puede crear un archivo que ya existe
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_03.rpy", line 16, in script
-    python:
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/labels/capitulo_1/escena_03.rpy", line 27, in <module>
-    Recoger(Inicializaciones().getEquipable(Inicializaciones.EQUIPABLE_SHINAI)), 0.42, 0.58, 25, 240))
-NameError: name 'Inicializaciones' is not defined
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\bootstrap.py", line 289, in bootstrap
+    renpy.main.main()
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\main.py", line 360, in main
+    renpy.persistent.update(True)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\persistent.py", line 359, in update
+    save()
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\persistent.py", line 369, in save
+    renpy.loadsave.location.save_persistent(data)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\savelocation.py", line 445, in save_persistent
+    l.save_persistent(data)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\savelocation.py", line 316, in save_persistent
+    safe_rename(fn_new, fn)
+  File "F:\PROGRAMACIO\renpy-6.18.3-sdk\renpy\loadsave.py", line 193, in safe_rename
+    os.rename(old, new)
+WindowsError: [Error 183] No se puede crear un archivo que ya existe
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
