@@ -15,16 +15,6 @@ label cap01_escena02:
             escena_C01S02.setItems(Flecha(Flecha.IZQUIERDA,"cap01_escena03", 0.05,0.8), Flecha(Flecha.TRANSPARENTE, "cap01_escena01", 0.41,0.29,270,175),
                                    MostrarTexto(None, ["Pio"], 0.69,0.6,50,50, ["Pio Pio"], "sound/pollo.mp3"))
 
-            # [ ["izquierda","home1",0.05,0.8]
-            #     ],[
-            #     [0.41,0.29,270,175,"Pantalla"],
-            #     [0.05,0.38,260,150,"Pantalla"],
-            #     [0,0,270,210,"Recuerdos"],
-            #     [0.6,0.1,130,100,"Soge"],
-            #     [0.88,0,50,100,"Konata"],
-            #     [0.78,0.2,400,300,"Vicio"],
-            #     [0.69,0.6,50,50,"Pollito"]
-            #     ]
 
         if escena_C01S02.getStatus() == 0:
             siguienteEscena = "cap01_escena02_init"
