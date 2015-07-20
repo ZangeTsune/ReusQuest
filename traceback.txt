@@ -1,25 +1,25 @@
-﻿﻿I'm sorry, but an uncaught exception occurred.
+﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/capitulo_1/escena_03.rpy", line 15, in script
+  File "game/labels/capitulo_1/escena_04.rpy", line 11, in script
     python:
-  File "game/labels/capitulo_1/escena_03.rpy", line 26, in <module>
-    Recoger(Equipable(Equipable.ARMA, item_shinai), 0.545,0.03,150,100))
-NameError: name 'item_shinai' is not defined
+  File "game/labels/capitulo_1/escena_04.rpy", line 17, in <module>
+    ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"]), 0.69,0.6,50,50))
+TypeError: __init__() takes at most 3 arguments (6 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/capitulo_1/escena_03.rpy", line 15, in script
+  File "game/labels/capitulo_1/escena_04.rpy", line 11, in script
     python:
-  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\ast.py", line 785, in execute
+  File "C:\Users\jaker_000\Desktop\renpy-6.99.5-sdk\renpy\ast.py", line 797, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Isidre\Dropbox\THE GAME\renpy-6.14.1-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+  File "C:\Users\jaker_000\Desktop\renpy-6.99.5-sdk\renpy\python.py", line 1448, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/capitulo_1/escena_03.rpy", line 26, in <module>
-    Recoger(Equipable(Equipable.ARMA, item_shinai), 0.545,0.03,150,100))
-NameError: name 'item_shinai' is not defined
+  File "game/labels/capitulo_1/escena_04.rpy", line 17, in <module>
+    ItemEscena(Dialogo(None, ["Pio"], ["Pio Pio"]), 0.69,0.6,50,50))
+TypeError: __init__() takes at most 3 arguments (6 given)
 
-Windows-7-6.1.7600
-Ren'Py 6.18.3.761
+Windows-8-6.2.9200
+Ren'Py 6.99.5.602
 Reus Quest PreAlpha 0.0.1 0.0

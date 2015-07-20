@@ -3,8 +3,8 @@
 
 init python:
     from game.model import *
-    from utils import ItemEscenaContainer
-    from utils import GlobalParams, Utils
+    from model.escenario import *
+    from game.utils import *
     #setattr(store, "globales", GlobalParams())
     globales = GlobalParams()
     utils = Utils(globales)

@@ -1,6 +1,6 @@
 __author__ = 'Gerard'
 
-class Inicializaciones:
+class InitPython:
 
     EQUIPABLE_SHINAI = "img_shinai.png"
 

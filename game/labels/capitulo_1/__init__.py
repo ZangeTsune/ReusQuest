@@ -1,5 +1,5 @@
 __author__ = 'Zange'
 
-__all__=["Inicializaciones"]
+__all__=["InitPython"]
 
-from Inicializaciones import Inicializaciones
+from InitPython import InitPython

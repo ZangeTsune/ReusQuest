@@ -1,6 +1,6 @@
 __author__ = 'Zange'
 
-__all__=['Consumible','Equipable','Equipo','ItemEscena','Mochila','Personaje','Monedero','Dialogo','Jump','RecogerHandler','escenario']
+__all__=['Consumible','Equipable','Equipo','ItemEscena','Mochila','Personaje','Monedero','Dialogo','Jump','RecogerHandler']
 
 from Consumible import Consumible
 from Equipable import Equipable
@@ -12,4 +12,4 @@ from Monedero import Monedero
 from Dialogo import Dialogo
 from Jump import Jump
 from RecogerHandler import RecogerHandler
-from escenario import *
+import escenario
